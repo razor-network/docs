@@ -1,16 +1,16 @@
 # Razor network
 
-Razor network is a decentralised oracle network.
-## Commands
+Razor network is a decentralised oracle network. Any application can utilize Razor in their application by interfacing with our smart contracts.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+##White paper
+The latest version of the whitepaper is always available at [Whitepaper](https://razor.network/whitepaper.pdf)
 
-## Project layout
+##Smart contracts
+Our smart contracts are hosted at [Contracts](https://github.com/razor-network/contracts)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Please note that the project is in active development and breaking changes are introduced frequently.
+
+##Client
+A javascript reference client is being developed. It can be found here: [CLI](https://github.com/razor-network/cli)
+
+Please see [Client documentation](client.md) for more details.
