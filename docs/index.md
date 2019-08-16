@@ -1,7 +1,6 @@
-# Welcome to MkDocs
+# Razor network
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
-
+Razor network is a decentralised oracle network.
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
