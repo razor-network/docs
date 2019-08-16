@@ -1,3 +1,4 @@
 site_name: Razor Network
 theme:
   name: 'material'
+google_analytics: ['UA-143423314-2', 'docs.razor.network']
