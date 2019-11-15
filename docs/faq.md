@@ -27,4 +27,4 @@ Razor Network is permissionless and decentralized. Anyone can run a node in the 
 Schells can be earned by becoming a staker in the network. Schells are earned in the form of block rewards in the network.
 
 ##I have more questions
-Please visit documentation for more details.
+For a detailed introduction, please check  [What is Razor Network?](explainer.md)
