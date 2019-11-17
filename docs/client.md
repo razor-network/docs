@@ -1,33 +1,33 @@
-#Client
+# Running a Node
 End user javascript client implmentation  for Razor network.
 ## Installation
-1. `npm i`
-2. `mv keys_sample.json keys.json`
-3. add api keys in keys.json
-4. create directory 'keys'
 
-Please make sure that contracts repo is also cloned in parent directory and contracts are compiled with `truffle compile`.
-e.g. contracts are in ~/contracts and this dir is ~/cli
+Please check [QuickStart](Quick Start/Stake.md) for installation instructions
 
 ## Commands
 Run the commands in following way:
-    node index.js <commands>
+    `node index.js <command>`
 You can run following commands in CLI:
 
 `-help` See a list of available commands
+
 `create <password>`  Creates a new wallet with given password. The wallets are stored in `keys/` directory.
-WARNING: this is not a secure method of key generation, DO NOT use it for assets on mainnet.
+
+>WARNING: this is not a secure method of key generation, DO NOT use it for assets on mainnet.
+The code will be improved in the future to make key generation more secure.
+
 Fund this account with ether and schells to start participating in the network.
+Supported commands:
 
     stake <amount> <address> <password>
-    vote <apiId> <address> <password>
+    vote <address> <password>
     unstake <address> <password>
     withdraw <address> <password>
     transfer <toAddress> <fromAddress> <password>
+Here,
 
-`<address>` is the address of the wallet generated using create command.
+`<address>` is the address of the wallet generated using create command. Check the `keys` directory to see all available keys.
 
-`<apiId>`is the api to use to get ETHUSD price. 1 for Kraken, 2 for Gemini.
 
 ## Example
 

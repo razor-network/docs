@@ -2,10 +2,19 @@
 
 Razor network is a proof of stake network. In order to participate in the network as a validator, you will need to "Stake" your Schells. Schells are the native tokens in the network and they are compatible with the ERC20 tokens standard.
 
-`Warning: Razor network is in alpha state and is deployed on görli testnet. Please don't use assets with value.`
+> Warning: Razor network is in alpha state and is deployed on görli testnet. Please don't use assets with value.
 
 ##Get tokens
-In order to get started, you will need some görli schells.
+
+You will need some görli ether to pay for transaction fees.
+
+You can get some here:
+
+1. [https://goerli-faucet.slock.it/](https://goerli-faucet.slock.it/)
+
+2. OR [https://faucet.goerli.mudit.blog/](https://faucet.goerli.mudit.blog/)
+
+In order to get started, you will also need some Görli schells.
 
 1. Use an ethereum compatible browser (e.g. Chrome browser with Metamask plugin)
 2. Set the network to "Görli testnet" in Metamask
@@ -13,14 +22,6 @@ In order to get started, you will need some görli schells.
 4. Paste your ethereum address in the address field.
 5. Click "Get SCH"
 6. After a few minutes, after your transaction is confirmed, click "Check SCH Balance" to confirm you have received some free testnet schells.
-
-You will also need some görli ether to pay for transaction fees.
-
-You can get some here:
-
-1. [https://goerli-faucet.slock.it/](https://goerli-faucet.slock.it/)
-
-2. OR [https://faucet.goerli.mudit.blog/](https://faucet.goerli.mudit.blog/)
 
 Now you are all set! Let's download the CLI client and start staking!
 
@@ -31,17 +32,35 @@ In future we will provide a docker container to make things easier.
 
 1. Clone the repositoy `https://github.com/razor-network/cli`
 
-`git clone git@github.com:razor-network/cli.git`
+    `git clone git@github.com:razor-network/cli.git`
 
-2. Go to the cloned directory `cd cli`
-3. Install packages `npm i`
-3. Create a directory called keys `mkdir keys`
-4. Rename the file config-sample.json to sample.json `mv config-sample.json config.json`
-5. Edit config.json to add your ethereum node address (private or infura)
+2. Go to the cloned directory
+
+    `cd cli`
+
+3. Install packages
+
+    `npm i`
+
+4. Create a directory called keys
+
+    `mkdir keys`
+
+5. Rename the file config-sample.json to sample.json
+
+    `mv config-sample.json config.json`
+
+6. Edit config.json to add your Ethereum node address (private or infura)
 
 ## Create a new wallet
-1. Create a new ethereum wallet with a password of your choice. `node index.js c <password>`
-2. You can check the `keys` directory for available wallets. `ls keys`
+1. Create a new ethereum wallet with a password of your choice.
+
+    `node index.js c <password>`
+
+2. You can check the `keys` directory for available wallets.
+
+    `ls keys`
+
 3. Send your Schells and görli ether to this address.
 
 ## Stake

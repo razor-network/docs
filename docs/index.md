@@ -2,7 +2,8 @@
 
 Razor network is a decentralised oracle network.
 
-    Anything which provides external data to a blockchain is called an “Oracle”.
+> Anything which provides external data to a blockchain is called an “Oracle”.
+
  Razor Network consists of validators who lock in their tokens as a “Stake” and provide data to the network. The honest validators are rewarded and those who report incoherently are penalized.
 
 The core of Razor Network is a set of smart contracts, that can run on any Ethereum compatible blockchain. Razor relies on the underlying blockchain for providing certain properties such as censorship resistance, security from network partition attacks, etc.
