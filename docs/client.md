@@ -23,7 +23,7 @@ Supported commands:
     vote <address> <password>
     unstake <address> <password>
     withdraw <address> <password>
-    transfer <toAddress> <fromAddress> <password>
+    transfer <to> <amount> <from> <password>
 Here,
 
 `<address>` is the address of the wallet generated using create command. Check the `keys` directory to see all available keys.
