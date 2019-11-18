@@ -18,13 +18,43 @@ You can run following commands in CLI:
 The code will be improved in the future to make key generation more secure.
 
 Fund this account with ether and schells to start participating in the network.
+
+You can use the full commands (stake) or the short form (s) as shown below.
+
 Supported commands:
 
-    stake <amount> <address> <password>
-    vote <address> <password>
-    unstake <address> <password>
-    withdraw <address> <password>
-    transfer <to> <amount> <from> <password>
+    stake|s <amount> <address> <password>
+
+Stake some schells
+
+    unstake|u <accountId>
+
+Unstake all schells
+
+    withdraw|w <accountId>
+
+Withdraw all schells. Make sure schells are unstaked and unlocked
+
+    vote|v <account> <password>
+
+Start monitoring contract, commit, vote, propose and dispute automatically
+
+    transfer|t <to> <amount> <from> <password>
+
+transfer schells
+
+    create|c <password>
+
+Create wallet with the given password
+
+    demo|d
+
+sample query URLs
+
+    createJob|j <url> <selector> <name> <repeat> <fee> <account> <password>
+
+Create oracle query job.
+
 Here,
 
 `<address>` is the address of the wallet generated using create command. Check the `keys` directory to see all available keys.
