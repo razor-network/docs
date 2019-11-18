@@ -1,5 +1,6 @@
 # Running a Node
-End user javascript client implmentation  for Razor network.
+You will need to run a node in order to become a staker and answer to queries in the network.
+
 ## Installation
 
 Please check [QuickStart](Quick Start/Stake.md) for installation instructions
@@ -33,8 +34,4 @@ Here,
 
     node index.js create deadbeef
     node index.js stake 1000 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c deadbeef
-    node index.js vote 1 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c deadbeef
-
-    // apiid 0 = CMC
-    // apiid 1 = Kraken
-    // apiid 2 = Gemini
+    node index.js vote 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c deadbeef
