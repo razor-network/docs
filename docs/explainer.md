@@ -143,6 +143,51 @@ The attacker may provide a data\-source which is non\-responsive, provides unrel
 
 The query itself may be invalid\. For example “Is this statement correct?” is an invalid query\.
 
+
+### How does the protocol achieve protection from various network attacks?
+#### Network partitioning, eclipse attacks, censorship attacks
+Razor is a set of smart contracts running on the underlying blockchain. It is the job of the underlying blockchain to protect itself on such attacks. We will either be using Ethereum main net which is secure from such attacks or a scalability solution that has the same properties.
+#### Frontrunning attacks
+The smart contracts have been carefully designed to make front running either impossible or indifferent from a normal transaction.
+#### Transaction withholding attack
+A validator can vote for epoch (e). The miner may withhold this transaction for (n) epochs and mine it in epoch (e + n). This may penalize the honest validator since the transactions on Razor network are time-sensitive and the result of a data feed may be different at epoch (e) and (e + n).
+
+To prevent this from happening, the epoch is included in all transactions on the network and only transactions from the current epoch are considered valid. This is an extra precaution as withholding attacks will fail in a censorship-resistant network.
+
+### How are potential smart contract vulnerabilities addressed?
+#### Out of gas vulnerabilities
+In these types of vulnerabilities, the smart contract is stuck in a state because the state changing function requires gas that is higher than the gas limit of the network.
+
+The smart contracts have been carefully designed to avoid loops. In the case where loops are unavoidable, such transactions are allowed to be completed in batches to avoid out of gas errors.
+
+A lot of the calculations are outsourced to the validators in a trustless manner.
+#### Re-entrancy attacks
+Re-entrancy attacks are kept in mind while developing the smart contracts.
+#### Other bugs and vulnerabilities
+Smart contracts will be audited by at least two external teams to make sure the contracts are bug-free.
+### Smart contract/network architecture
+A simplified network and smart contract architecture is shown below. The illustration shows the case where the client application is hosted on the same blockchain as Razor Network smart contracts. The case where the application is on a different network is not shown.
+
+![Architecture](img/contracts.jpg)
+*Smart contracts and network architecture*
+
+Functions of the various contracts:
+
+State manager: Manage the state of the network
+
+Stake Manager: Staking and unstaking, penalties and rewards
+
+Vote Manager: Management of reported votes: commits and reveals
+
+Block Manager: Create new blocks on Razor Network
+
+Job Manager: This contract manager queue of pending
+queries and results of processed queries
+
+Delegator: Proxy contract provides access to the latest Job Manager contract.
+
+Various utility libraries, storage contracts, and interfaces are not shown for clarity purposes.
+
 ### How is the required scalability achieved?
 
 Razor relies on an underlying blockchain for various features such as:
