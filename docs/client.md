@@ -3,7 +3,7 @@ You will need to run a node in order to become a staker and answer to queries in
 
 ## Installation
 
-Please check [QuickStart](Quick Start/Stake.md) for installation instructions
+Please check [Quick Start](Quick Start/Stake.md) for installation instructions
 
 ## Commands
 Run the commands in following way:
