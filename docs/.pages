@@ -1,6 +1,7 @@
 arrange:
     - index.md
     - Quick Start
+    - tutorial.md
     - explainer.md
     - ...
     - FAQ.md

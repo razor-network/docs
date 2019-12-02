@@ -29,8 +29,8 @@ The Address of the job manager contract can be found [here](https://github.com/r
 Note: Currently creating queries on Razor is free of cost.
 
 
-## Query the delegator
-You can query the proxy address to get the results of the quries.
+## Get the results from the Oracle
+You can access the proxy delegator contract to get the results of the datafeeds.
 
 1. You will need to know the "Job ID" of your query. You can go to [https://razorscan.io/#/custom](https://razorscan.io/#/custom) and select your query to know the Job ID of your query.
 2. You can call the "getResult" method of Delegator to get latest result of your query. The source of the contract is here : [Delegator.sol](https://github.com/razor-network/contracts/blob/master/contracts/Delegator.sol)
