@@ -155,3 +155,10 @@ Modify the `components/HelloWorld.vue` file as shown [here](https://github.com/r
 You can run the dApp by using the following command
 
 ``` npm run dev ```
+
+## Instructions for using the dApp
+Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to görli. You will need some görli ether to pay transaction fees.
+
+1. Add datafeeds. e.g. 1,2,5. Wait for a few minutes for tx to confirm.
+2. Click "Calculate the current king" Wait for a few minutes for tx to confirm.
+3. Refresh the page to see the new king of crypto.
