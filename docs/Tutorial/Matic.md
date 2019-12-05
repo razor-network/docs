@@ -1,10 +1,15 @@
-# Tutorial
+# Tutorial - Matic
 In this tutorial we will explore how to use Razor Oracle network in your applications.
 We will create an application called "King of Crypto" using Razor network. The code for this sample app is
 available at [https://github.com/razor-network/king-of-crypto](https://github.com/razor-network/king-of-crypto)
 
-![dApp](img/dapp.png)
+![dApp](../img/dapp.png)
 
+## Network
+These instructions are for deploying the dApp on Matic testnet. Please click below if you want to deploy on a different network.
+
+* [Görli](../Görli/)
+* [Matic](../Matic/)
 ## Setting up the Smart Contracts
 We will be using truffle to set up, compile and deploy the smart contracts.
 Truffle can be installed by
@@ -45,7 +50,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x058EF5a3d450A2fac5d24dDc75d516A136AE3f62);
+        razor = Razor(0x1AE452c743791f0265611A3647deBEB2857a401d);
     }
 
     function addFeed(uint256 jobId) public {
@@ -84,15 +89,13 @@ contract King {
 }
 ```
 
-Here Delegator.sol is the file at [Delegator.sol](https://github.com/razor-network/contracts/blob/master/contracts/Delegator.sol).
-
-Please note that we frequently redeploy the testnet to speed up the development process. Please make sure to replace the Delegator address with the latest delegator address from [ADDRESSES.md](https://github.com/razor-network/contracts/blob/master/ADDRESSES.md)
+Make sure to set the Razor address to `0x1AE452c743791f0265611A3647deBEB2857a401d`
 
 A datafeed can be added to the contract using the `addFeed()` function.
 
 This function requires a "Job ID", also known as the datafeed ID. You can know the available datafeeds and their ID by exploring [https://razorscan.io/#/custom](https://razorscan.io/#/custom)
 
-![Datafeed ID](img/datafeedID.png)
+![Datafeed ID](../img/datafeedID.png)
 
 The instructions to create a new datafeed can be found [Here](Quick Start/usage.md#create-a-datafeed-query-using-razorscan)
 
@@ -118,19 +121,16 @@ deployer.then(async () => {
 
 ## Set up the truffle configuration
 
-Razor network testnet is currently deployed on Görli ethereum test network. So please make sure you are deploying the
-contract on görli testnet.
-
 Use an ethereum wallet such as [MyEtherWallet](https://www.myetherwallet.com/create-wallet) or [MyCrypto](https://download.mycrypto.com/) to create a new wallet with 12-word mnemonic phrase.
 
-Create a new file called `.secret` in the root of the project and paste the above mnemonic phrase. Fund this ethereum wallet with görli ether obtained from a faucet such as [https://goerli-faucet.slock.it/](https://goerli-faucet.slock.it/)
+Create a new file called `.secret` in the root of the project and paste the above mnemonic phrase. Currently the Matic testnet does not require ETH since the transactions are free of cost.
 
 You can set up truffle configuration as it suits you. You can see this file for reference. [truffle-config.js](https://github.com/razor-network/king-of-crypto/blob/master/truffle-config.js)
 
 ## Deploy the Contracts
-Type the following command to deploy the contracts on görli testnet.
+Type the following command to deploy the contracts on Matic testnet.
 
-`truffle migrate --network goerli`
+`truffle migrate --network matic`
 
 ## Setting up the frontend using Vue
 
@@ -146,7 +146,7 @@ In the root of the project, type the following command. Choose default options.
 
 This will create a new directory `king` with a blank vue project.
 
-Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the delegator address as seen in [ADDRESSES.md](https://github.com/razor-network/contracts/blob/master/ADDRESSES.md).
+Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the variable `razorAddress` with `0x1AE452c743791f0265611A3647deBEB2857a401d` and `networkId` with `8995`
 
 The `getJob` function in `common.js` shows how to get details of a datafeed in javascript directly from Razor Network Oracle.
 
@@ -157,7 +157,7 @@ You can run the dApp by using the following command
 ``` npm run dev ```
 
 ## Instructions for using the dApp
-Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to görli. You will need some görli ether to pay transaction fees.
+Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to 'https://testnet2.matic.network'.
 
 1. Add datafeeds. e.g. 1,2,5. Wait for a few minutes for tx to confirm.
 2. Click "Calculate the current king" Wait for a few minutes for tx to confirm.
