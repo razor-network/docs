@@ -146,6 +146,10 @@ In the root of the project, type the following command. Choose default options.
 
 This will create a new directory `king` with a blank vue project.
 
+You will need `web3.js` in order to interact with the Matic blockchain. install it typing
+
+`npm i --save web3`
+
 Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the variable `razorAddress` with `0x1AE452c743791f0265611A3647deBEB2857a401d` and `networkId` with `8995`
 
 The `getJob` function in `common.js` shows how to get details of a datafeed in javascript directly from Razor Network Oracle.
