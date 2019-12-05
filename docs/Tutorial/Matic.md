@@ -16,6 +16,8 @@ Truffle can be installed by
 
 `npm i -g truffle`
 
+`npm i -g truffle-hdwallet-provider`
+
 Create a new directory and type:
 
 `truffle init`
@@ -97,7 +99,7 @@ This function requires a "Job ID", also known as the datafeed ID. You can know t
 
 ![Datafeed ID](../img/datafeedID.png)
 
-The instructions to create a new datafeed can be found [Here](Quick Start/usage.md#create-a-datafeed-query-using-razorscan)
+The instructions to create a new datafeed can be found [Here](../Quick Start/usage.md#create-a-datafeed-query-using-razorscan)
 
 The following line fetches result from Razor Oracle Network for the relevent datafeed Id.
 
@@ -146,7 +148,7 @@ In the root of the project, type the following command. Choose default options.
 
 This will create a new directory `king` with a blank vue project.
 
-You will need `web3.js` in order to interact with the Matic blockchain. install it typing
+You will need `web3.js` in order to interact with the Matic network. install it typing
 
 `npm i --save web3`
 
