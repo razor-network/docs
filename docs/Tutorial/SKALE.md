@@ -1,4 +1,4 @@
-# Tutorial - Görli
+# Tutorial - SKALE
 In this tutorial we will explore how to use Razor Oracle network in your applications.
 We will create an application called "King of Crypto" using Razor network. The code for this sample app is
 available at [https://github.com/razor-network/king-of-crypto](https://github.com/razor-network/king-of-crypto)
@@ -6,7 +6,7 @@ available at [https://github.com/razor-network/king-of-crypto](https://github.co
 ![dApp](../img/dapp.png)
 
 ## Network
-These instructions are for deploying the dApp on görli testnet. Please click below if you want to deploy on a different network.
+These instructions are for deploying the dApp on SKALE testnet. Please click below if you want to deploy on a different network.
 
 * [Görli](../Görli/)
 * [Matic](../Matic/)
@@ -15,6 +15,8 @@ We will be using truffle to set up, compile and deploy the smart contracts.
 Truffle can be installed by
 
 `npm i -g truffle`
+
+`npm i -g truffle-hdwallet-provider`
 
 Create a new directory and type:
 
@@ -50,7 +52,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x310DF80268CfB188B50291F2b7a1A26b97614F4D);
+        razor = Razor(0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09);
     }
 
     function addFeed(uint256 jobId) public {
@@ -89,8 +91,7 @@ contract King {
 }
 ```
 
-
-Please note that we frequently redeploy the testnet to speed up the development process. Please make sure to replace the Delegator address with the latest delegator address from [ADDRESSES.md](https://github.com/razor-network/contracts/blob/master/ADDRESSES.md)
+Make sure to set the Razor address to `0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09`
 
 A datafeed can be added to the contract using the `addFeed()` function.
 
@@ -122,19 +123,16 @@ deployer.then(async () => {
 
 ## Set up the truffle configuration
 
-Razor network testnet is currently deployed on Görli ethereum test network. So please make sure you are deploying the
-contract on görli testnet.
-
 Use an ethereum wallet such as [MyEtherWallet](https://www.myetherwallet.com/create-wallet) or [MyCrypto](https://download.mycrypto.com/) to create a new wallet with 12-word mnemonic phrase.
 
-Create a new file called `.secret` in the root of the project and paste the above mnemonic phrase. Fund this ethereum wallet with görli ether obtained from a faucet such as [https://goerli-faucet.slock.it/](https://goerli-faucet.slock.it/)
+Create a new file called `.secret` in the root of the project and paste the above mnemonic phrase. Please fund this account with SKALE testnet ether.
 
 You can set up truffle configuration as it suits you. You can see this file for reference. [truffle-config.js](https://github.com/razor-network/king-of-crypto/blob/master/truffle-config.js)
 
 ## Deploy the Contracts
-Type the following command to deploy the contracts on görli testnet.
+Type the following command to deploy the contracts on SKALE testnet.
 
-`truffle migrate --network goerli`
+`truffle migrate --network skale`
 
 ## Setting up the frontend using Vue
 
@@ -150,7 +148,11 @@ In the root of the project, type the following command. Choose default options.
 
 This will create a new directory `king` with a blank vue project.
 
-Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the delegator address as seen in [ADDRESSES.md](https://github.com/razor-network/contracts/blob/master/ADDRESSES.md).
+You will need `web3.js` in order to interact with the SKALE network. install it typing
+
+`npm i --save web3`
+
+Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the variable `razorAddress` with `0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09` and `networkId` with `1`
 
 The `getJob` function in `common.js` shows how to get details of a datafeed in javascript directly from Razor Network Oracle.
 
@@ -161,7 +163,7 @@ You can run the dApp by using the following command
 ``` npm run dev ```
 
 ## Instructions for using the dApp
-Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to görli. You will need some görli ether to pay transaction fees.
+Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to your SKALE endpoint.
 
 1. Add datafeeds. e.g. 1,2,5. Wait for a few minutes for tx to confirm.
 2. Click "Calculate the current king" Wait for a few minutes for tx to confirm.

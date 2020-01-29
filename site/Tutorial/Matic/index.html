@@ -1,0 +1,738 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Tutorial - Matic - Razor Network</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-143423314-2", "docs.razor.network")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#tutorial-matic" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Razor Network" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Razor Network
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Tutorial - Matic
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Razor Network" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Razor Network
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Quick Start
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Quick Start
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Quick Start/Stake/" title="Stake" class="md-nav__link">
+      Stake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Quick Start/usage/" title="Use the Oracle" class="md-nav__link">
+      Use the Oracle
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Tutorial
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Tutorial
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Görli/" title="Tutorial - Görli" class="md-nav__link">
+      Tutorial - Görli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tutorial - Matic
+      </label>
+    
+    <a href="./" title="Tutorial - Matic" class="md-nav__link md-nav__link--active">
+      Tutorial - Matic
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-smart-contracts" class="md-nav__link">
+    Setting up the Smart Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-the-migration" class="md-nav__link">
+    Set up the migration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-the-truffle-configuration" class="md-nav__link">
+    Set up the truffle configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-contracts" class="md-nav__link">
+    Deploy the Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-frontend-using-vue" class="md-nav__link">
+    Setting up the frontend using Vue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions-for-using-the-dapp" class="md-nav__link">
+    Instructions for using the dApp
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SKALE/" title="Tutorial - SKALE" class="md-nav__link">
+      Tutorial - SKALE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../explainer/" title="What is Razor Network?" class="md-nav__link">
+      What is Razor Network?
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../client/" title="Running a Node" class="md-nav__link">
+      Running a Node
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts/" title="Contracts" class="md-nav__link">
+      Contracts
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="FAQs" class="md-nav__link">
+      FAQs
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-smart-contracts" class="md-nav__link">
+    Setting up the Smart Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-the-migration" class="md-nav__link">
+    Set up the migration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-the-truffle-configuration" class="md-nav__link">
+    Set up the truffle configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-contracts" class="md-nav__link">
+    Deploy the Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-frontend-using-vue" class="md-nav__link">
+    Setting up the frontend using Vue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions-for-using-the-dapp" class="md-nav__link">
+    Instructions for using the dApp
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="tutorial-matic">Tutorial - Matic</h1>
+<p>In this tutorial we will explore how to use Razor Oracle network in your applications.
+We will create an application called "King of Crypto" using Razor network. The code for this sample app is
+available at <a href="https://github.com/razor-network/king-of-crypto">https://github.com/razor-network/king-of-crypto</a></p>
+<p><img alt="dApp" src="../../img/dapp.png" /></p>
+<h2 id="network">Network</h2>
+<p>These instructions are for deploying the dApp on Matic testnet. Please click below if you want to deploy on a different network.</p>
+<ul>
+<li><a href="../Görli/">Görli</a></li>
+<li><a href="../Matic/">Matic</a></li>
+</ul>
+<h2 id="setting-up-the-smart-contracts">Setting up the Smart Contracts</h2>
+<p>We will be using truffle to set up, compile and deploy the smart contracts.
+Truffle can be installed by</p>
+<p><code>npm i -g truffle</code></p>
+<p><code>npm i -g truffle-hdwallet-provider</code></p>
+<p>Create a new directory and type:</p>
+<p><code>truffle init</code></p>
+<p>This will setup a new truffle project.</p>
+<p>Go to the <code>contracts</code> subdirectory and create a new file called <code>King.sol</code></p>
+<p>The smart contract has the following functionality:</p>
+<ol>
+<li>
+<p>Get prices of different cryptocurrencies from Razor Oracle Network.</p>
+</li>
+<li>
+<p>Find the biggest gainer since last calculation. This is the new King of Crypto.</p>
+</li>
+<li>
+<p>If all cryptocurrencies lost value, find the crypto with least loss. This is the new King of Crypto.</p>
+</li>
+</ol>
+<p>Paste the following code in that file.</p>
+<pre><code>pragma solidity 0.5.10;
+
+interface Razor {
+    function getResult(uint256 id) external view returns (uint256);
+    function getJob(uint256 id) external view returns(string memory url, string memory selector, string memory name, bool repeat, uint256 result);
+}
+
+contract King {
+    Razor public razor;
+    uint256[] public jobs;
+    uint256 public numJobs = 0;
+    uint256 public king = 0;
+    uint256[] public lastResults;
+
+    constructor() public {
+        razor = Razor(0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4);
+    }
+
+    function addFeed(uint256 jobId) public {
+        jobs.push(jobId);
+        numJobs = numJobs + 1;
+        lastResults.push(0);
+    }
+
+    function findKing() public {
+        uint256 highestGain = 0;
+        uint256 highestGainer = 0;
+        uint256 leastLoss = 0;
+        uint256 leastLoser = 0;
+        for(uint256 i = 0; i &lt; jobs.length; i++) {
+            uint256 price = razor.getResult(jobs[i]);
+            if(price &gt; lastResults[i]) {
+                if(price - lastResults[i] &gt; highestGain) {
+                    highestGain = price - lastResults[i];
+                    highestGainer = jobs[i];
+                }
+            } else if(price &lt; lastResults[i]) {
+                    if(lastResults[i] - price &lt; leastLoss) {
+                        leastLoss = lastResults[i] - price;
+                        leastLoser = jobs[i];
+                    }
+                }
+
+            lastResults[i] = price;
+        }
+        if (highestGain &gt; 0) {
+            king = highestGainer;
+        } else if (leastLoss &gt; 0) {
+            king = leastLoser;
+        }
+    }
+}
+</code></pre>
+
+<p>Make sure to set the Razor address to <code>0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4</code></p>
+<p>A datafeed can be added to the contract using the <code>addFeed()</code> function.</p>
+<p>This function requires a "Job ID", also known as the datafeed ID. You can know the available datafeeds and their ID by exploring <a href="https://razorscan.io/#/custom">https://razorscan.io/#/custom</a></p>
+<p><img alt="Datafeed ID" src="../../img/datafeedID.png" /></p>
+<p>The instructions to create a new datafeed can be found <a href="../../Quick Start/usage/#create-a-datafeed-query-using-razorscan">Here</a></p>
+<p>The following line fetches result from Razor Oracle Network for the relevent datafeed Id.</p>
+<p><code>uint256 price = delegator.getResult(jobs[i]);</code></p>
+<h2 id="set-up-the-migration">Set up the migration</h2>
+<p>Create a new file called 2_deploy.js in the migrations director and paste the following code. This will tell truffle how to deploy the contract on the network.</p>
+<pre><code>
+var King = artifacts.require('./King.sol')
+module.exports = async function (deployer) {
+
+deployer.then(async () =&gt; {
+  await deployer.deploy(King)
+})
+}
+
+</code></pre>
+
+<h2 id="set-up-the-truffle-configuration">Set up the truffle configuration</h2>
+<p>Use an ethereum wallet such as <a href="https://www.myetherwallet.com/create-wallet">MyEtherWallet</a> or <a href="https://download.mycrypto.com/">MyCrypto</a> to create a new wallet with 12-word mnemonic phrase.</p>
+<p>Create a new file called <code>.secret</code> in the root of the project and paste the above mnemonic phrase. Currently the Matic testnet does not require ETH since the transactions are free of cost.</p>
+<p>You can set up truffle configuration as it suits you. You can see this file for reference. <a href="https://github.com/razor-network/king-of-crypto/blob/master/truffle-config.js">truffle-config.js</a></p>
+<h2 id="deploy-the-contracts">Deploy the Contracts</h2>
+<p>Type the following command to deploy the contracts on Matic testnet.</p>
+<p><code>truffle migrate --network matic</code></p>
+<h2 id="setting-up-the-frontend-using-vue">Setting up the frontend using Vue</h2>
+<p>We will be using Vue to create a UI for the application. React or any other javascript framework can also be used alternatively.</p>
+<p>Vue cli can be installed by</p>
+<p><code>npm install -g @vue/cli</code></p>
+<p>In the root of the project, type the following command. Choose default options.</p>
+<p><code>vue create king</code></p>
+<p>This will create a new directory <code>king</code> with a blank vue project.</p>
+<p>You will need <code>web3.js</code> in order to interact with the Matic network. install it typing</p>
+<p><code>npm i --save web3</code></p>
+<p>Create a <code>common.js</code> file as shown <a href="https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js">here</a>. Make sure to replace the variable <code>razorAddress</code> with <code>0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4</code> and <code>networkId</code> with <code>8995</code></p>
+<p>The <code>getJob</code> function in <code>common.js</code> shows how to get details of a datafeed in javascript directly from Razor Network Oracle.</p>
+<p>Modify the <code>components/HelloWorld.vue</code> file as shown <a href="https://github.com/razor-network/king-of-crypto/blob/master/king/src/components/HelloWorld.vue">here</a></p>
+<p>You can run the dApp by using the following command</p>
+<p><code>npm run dev</code></p>
+<h2 id="instructions-for-using-the-dapp">Instructions for using the dApp</h2>
+<p>Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to 'https://testnet2.matic.network'.</p>
+<ol>
+<li>Add datafeeds. e.g. 1,2,5. Wait for a few minutes for tx to confirm.</li>
+<li>Click "Calculate the current king" Wait for a few minutes for tx to confirm.</li>
+<li>Refresh the page to see the new king of crypto.</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Görli/" title="Tutorial - Görli" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tutorial - Görli
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../SKALE/" title="Tutorial - SKALE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Tutorial - SKALE
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
