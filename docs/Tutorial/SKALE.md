@@ -52,7 +52,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09);
+        razor = Razor(0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e);
     }
 
     function addFeed(uint256 jobId) public {
@@ -91,7 +91,7 @@ contract King {
 }
 ```
 
-Make sure to set the Razor address to `0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09`
+Make sure to set the Razor address to `0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e`
 
 A datafeed can be added to the contract using the `addFeed()` function.
 
@@ -152,7 +152,7 @@ You will need `web3.js` in order to interact with the SKALE network. install it 
 
 `npm i --save web3`
 
-Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the variable `razorAddress` with `0xFF67C85D2e179fEFb3428Ae6909a9a0C60cF5d09` and `networkId` with `1`
+Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the variable `razorAddress` with `0x3be8b3Ea5Cb7d7D19032A56D3aDF1F0f8e97e34e` and `networkId` with `1`
 
 The `getJob` function in `common.js` shows how to get details of a datafeed in javascript directly from Razor Network Oracle.
 
