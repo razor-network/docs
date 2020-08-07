@@ -16,7 +16,7 @@ Truffle can be installed by
 
 `npm i -g truffle`
 
-`npm i -g truffle-hdwallet-provider`
+`npm i -g @truffle/hdwallet-provider`
 
 Create a new directory and type:
 
@@ -37,7 +37,7 @@ The smart contract has the following functionality:
 Paste the following code in that file.
 
 ```
-pragma solidity 0.5.10;
+pragma solidity 0.6.11;
 
 interface Razor {
     function getResult(uint256 id) external view returns (uint256);
@@ -52,7 +52,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4);
+        razor = Razor(0x6FBDB9A4A27E17dcc852C093629b2808B09c663e);
     }
 
     function addFeed(uint256 jobId) public {
@@ -91,7 +91,7 @@ contract King {
 }
 ```
 
-Make sure to set the Razor address to `0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4`
+Make sure to set the Razor address to `0x6FBDB9A4A27E17dcc852C093629b2808B09c663e`
 
 A datafeed can be added to the contract using the `addFeed()` function.
 
@@ -152,19 +152,17 @@ You will need `web3.js` in order to interact with the Matic network. install it 
 
 `npm i --save web3`
 
-Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the variable `razorAddress` with `0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4` and `networkId` with `8995`
+Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the variable `razorAddress` with `0x6FBDB9A4A27E17dcc852C093629b2808B09c663e` and `networkId` with `80001`
 
 The `getJob` function in `common.js` shows how to get details of a datafeed in javascript directly from Razor Network Oracle.
 
-Modify the `components/HelloWorld.vue` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/components/HelloWorld.vue)
-
 You can run the dApp by using the following command
 
-``` npm run dev ```
+``` npm run serve ```
 
 ## Instructions for using the dApp
-Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to 'https://testnet2.matic.network'.
+Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to 'https://rpc-mumbai.matic.today'.
 
-1. Add datafeeds. e.g. 1,2,5. Wait for a few minutes for tx to confirm.
+1. Add datafeeds. e.g. 1,2,4. Wait for a few minutes for tx to confirm.
 2. Click "Calculate the current king" Wait for a few minutes for tx to confirm.
 3. Refresh the page to see the new king of crypto.
