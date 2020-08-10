@@ -1,6 +1,6 @@
 site_name: Razor Network
 theme:
-  name: 'readthedocs'
+  name: 'material'
 google_analytics: ['UA-143423314-2', 'docs.razor.to']
 plugins:
     - search
