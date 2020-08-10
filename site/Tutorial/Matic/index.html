@@ -540,7 +540,7 @@ available at <a href="https://github.com/razor-network/king-of-crypto">https://g
 <p>We will be using truffle to set up, compile and deploy the smart contracts.
 Truffle can be installed by</p>
 <p><code>npm i -g truffle</code></p>
-<p><code>npm i -g truffle-hdwallet-provider</code></p>
+<p><code>npm i -g @truffle/hdwallet-provider</code></p>
 <p>Create a new directory and type:</p>
 <p><code>truffle init</code></p>
 <p>This will setup a new truffle project.</p>
@@ -558,7 +558,7 @@ Truffle can be installed by</p>
 </li>
 </ol>
 <p>Paste the following code in that file.</p>
-<pre><code>pragma solidity 0.5.10;
+<pre><code>pragma solidity 0.6.11;
 
 interface Razor {
     function getResult(uint256 id) external view returns (uint256);
@@ -573,7 +573,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4);
+        razor = Razor(0x6FBDB9A4A27E17dcc852C093629b2808B09c663e);
     }
 
     function addFeed(uint256 jobId) public {
@@ -587,15 +587,15 @@ contract King {
         uint256 highestGainer = 0;
         uint256 leastLoss = 0;
         uint256 leastLoser = 0;
-        for(uint256 i = 0; i &lt; jobs.length; i++) {
+        for(uint256 i = 0; i < jobs.length; i++) {
             uint256 price = razor.getResult(jobs[i]);
-            if(price &gt; lastResults[i]) {
-                if(price - lastResults[i] &gt; highestGain) {
+            if(price > lastResults[i]) {
+                if(price - lastResults[i] > highestGain) {
                     highestGain = price - lastResults[i];
                     highestGainer = jobs[i];
                 }
-            } else if(price &lt; lastResults[i]) {
-                    if(lastResults[i] - price &lt; leastLoss) {
+            } else if(price < lastResults[i]) {
+                    if(lastResults[i] - price < leastLoss) {
                         leastLoss = lastResults[i] - price;
                         leastLoser = jobs[i];
                     }
@@ -603,16 +603,16 @@ contract King {
 
             lastResults[i] = price;
         }
-        if (highestGain &gt; 0) {
+        if (highestGain > 0) {
             king = highestGainer;
-        } else if (leastLoss &gt; 0) {
+        } else if (leastLoss > 0) {
             king = leastLoser;
         }
     }
 }
 </code></pre>
 
-<p>Make sure to set the Razor address to <code>0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4</code></p>
+<p>Make sure to set the Razor address to <code>0x6FBDB9A4A27E17dcc852C093629b2808B09c663e</code></p>
 <p>A datafeed can be added to the contract using the <code>addFeed()</code> function.</p>
 <p>This function requires a "Job ID", also known as the datafeed ID. You can know the available datafeeds and their ID by exploring <a href="https://razorscan.io/#/custom">https://razorscan.io/#/custom</a></p>
 <p><img alt="Datafeed ID" src="../../img/datafeedID.png" /></p>
@@ -648,15 +648,14 @@ deployer.then(async () =&gt; {
 <p>This will create a new directory <code>king</code> with a blank vue project.</p>
 <p>You will need <code>web3.js</code> in order to interact with the Matic network. install it typing</p>
 <p><code>npm i --save web3</code></p>
-<p>Create a <code>common.js</code> file as shown <a href="https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js">here</a>. Make sure to replace the variable <code>razorAddress</code> with <code>0x49b16f1e15d611DcF87b9A3E51F86C41b2aa56E4</code> and <code>networkId</code> with <code>8995</code></p>
+<p>Create a <code>common.js</code> file as shown <a href="https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js">here</a>. Make sure to replace the variable <code>razorAddress</code> with <code>0x6FBDB9A4A27E17dcc852C093629b2808B09c663e</code> and <code>networkId</code> with <code>80001</code></p>
 <p>The <code>getJob</code> function in <code>common.js</code> shows how to get details of a datafeed in javascript directly from Razor Network Oracle.</p>
-<p>Modify the <code>components/HelloWorld.vue</code> file as shown <a href="https://github.com/razor-network/king-of-crypto/blob/master/king/src/components/HelloWorld.vue">here</a></p>
 <p>You can run the dApp by using the following command</p>
-<p><code>npm run dev</code></p>
+<p><code>npm run serve</code></p>
 <h2 id="instructions-for-using-the-dapp">Instructions for using the dApp</h2>
-<p>Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to 'https://testnet2.matic.network'.</p>
+<p>Make sure you are using an ethereum compatible browser (Chrome + Metamask) and set the network to 'https://rpc-mumbai.matic.today'.</p>
 <ol>
-<li>Add datafeeds. e.g. 1,2,5. Wait for a few minutes for tx to confirm.</li>
+<li>Add datafeeds. e.g. 1,2,4. Wait for a few minutes for tx to confirm.</li>
 <li>Click "Calculate the current king" Wait for a few minutes for tx to confirm.</li>
 <li>Refresh the page to see the new king of crypto.</li>
 </ol>
