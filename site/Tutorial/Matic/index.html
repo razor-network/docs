@@ -573,7 +573,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x6FBDB9A4A27E17dcc852C093629b2808B09c663e);
+        razor = Razor(0x2D50A444774EB4876e8e021E27125D0Aa91A7C7F);
     }
 
     function addFeed(uint256 jobId) public {
@@ -612,7 +612,7 @@ contract King {
 }
 </code></pre>
 
-<p>Make sure to set the Razor address to <code>0x6FBDB9A4A27E17dcc852C093629b2808B09c663e</code></p>
+<p>Make sure to set the Razor address to <code>0x2D50A444774EB4876e8e021E27125D0Aa91A7C7F</code></p>
 <p>A datafeed can be added to the contract using the <code>addFeed()</code> function.</p>
 <p>This function requires a "Job ID", also known as the datafeed ID. You can know the available datafeeds and their ID by exploring <a href="https://razorscan.io/#/custom">https://razorscan.io/#/custom</a></p>
 <p><img alt="Datafeed ID" src="../../img/datafeedID.png" /></p>
@@ -648,7 +648,7 @@ deployer.then(async () =&gt; {
 <p>This will create a new directory <code>king</code> with a blank vue project.</p>
 <p>You will need <code>web3.js</code> in order to interact with the Matic network. install it typing</p>
 <p><code>npm i --save web3</code></p>
-<p>Create a <code>common.js</code> file as shown <a href="https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js">here</a>. Make sure to replace the variable <code>razorAddress</code> with <code>0x6FBDB9A4A27E17dcc852C093629b2808B09c663e</code> and <code>networkId</code> with <code>80001</code></p>
+<p>Create a <code>common.js</code> file as shown <a href="https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js">here</a>. Make sure to replace the variable <code>razorAddress</code> with <code>0x2D50A444774EB4876e8e021E27125D0Aa91A7C7F</code> and <code>networkId</code> with <code>80001</code></p>
 <p>The <code>getJob</code> function in <code>common.js</code> shows how to get details of a datafeed in javascript directly from Razor Network Oracle.</p>
 <p>You can run the dApp by using the following command</p>
 <p><code>npm run serve</code></p>
