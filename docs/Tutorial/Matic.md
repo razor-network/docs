@@ -52,7 +52,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x6FBDB9A4A27E17dcc852C093629b2808B09c663e);
+        razor = Razor(0x2D50A444774EB4876e8e021E27125D0Aa91A7C7F);
     }
 
     function addFeed(uint256 jobId) public {
@@ -91,7 +91,7 @@ contract King {
 }
 ```
 
-Make sure to set the Razor address to `0x6FBDB9A4A27E17dcc852C093629b2808B09c663e`
+Make sure to set the Razor address to `0x2D50A444774EB4876e8e021E27125D0Aa91A7C7F`
 
 A datafeed can be added to the contract using the `addFeed()` function.
 
@@ -152,7 +152,7 @@ You will need `web3.js` in order to interact with the Matic network. install it 
 
 `npm i --save web3`
 
-Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the variable `razorAddress` with `0x6FBDB9A4A27E17dcc852C093629b2808B09c663e` and `networkId` with `80001`
+Create a `common.js` file as shown [here](https://github.com/razor-network/king-of-crypto/blob/master/king/src/utils/common.js). Make sure to replace the variable `razorAddress` with `0x2D50A444774EB4876e8e021E27125D0Aa91A7C7F` and `networkId` with `80001`
 
 The `getJob` function in `common.js` shows how to get details of a datafeed in javascript directly from Razor Network Oracle.
 
