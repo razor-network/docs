@@ -164,7 +164,7 @@ A lot of the calculations are outsourced to the validators in a trustless manner
 #### Re-entrancy attacks
 Re-entrancy attacks are kept in mind while developing the smart contracts.
 #### Other bugs and vulnerabilities
-Smart contracts will be audited by at least two external teams to make sure the contracts are bug-free.
+Smart contracts will be audited to make sure the contracts are bug-free.
 ### Smart contract/network architecture
 A simplified network and smart contract architecture is shown below. The illustration shows the case where the client application is hosted on the same blockchain as Razor Network smart contracts. The case where the application is on a different network is not shown.
 
@@ -200,19 +200,6 @@ Razor relies on an underlying blockchain for various features such as:
 6. Avoid network partitioning and eclipse attacks and so on
 
 Since all the operations and communication in Razor happens via transactions on the blockchain, the underlying blockchain must be able to handle the capacity requirement in addition to the desired features mentioned above\.
-
-For these reasons, the initial version of the network will be released on top of Ethereum Network\. In the future, a separate Ethereum Virtual Machine compatible blockchain will be deployed\. This blockchain will be a Proof of Stake blockchain which uses the Honey Badger BFT consensus algorithm\.
-
-This particular consensus algorithm was chosen due to the following reasons:
-
-1. Honey Badger BFT provides instant finality
-2. The transactions are encrypted before being included in the block\. This provides censorship resistance
-3. Supports a large number of stakers and staking pools\.
-4. Provides asynchronicity and smaller block times
-
-Honey Badger BFT was created by Cornell University and is being implemented by [https://poa\.network](https://poa.network)
-
-Other scalability solutions may be explored in the future if necessary\.
 
 ### How can a decentralized application use Razor? What is the information flow?
 
