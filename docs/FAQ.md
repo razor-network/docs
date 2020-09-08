@@ -20,8 +20,5 @@ Schell is the native ERC20 utility token used in Razor Network for staking purpo
 ## Who can run a node?
 Razor Network is permissionless and decentralized. Anyone can run a node in the network provided they have enough Schells.
 
-## How can I earn Schells?
-Schells can be earned by becoming a staker in the network. Schells are earned in the form of block rewards in the network.
-
 ## I have more questions
 For a detailed introduction, please check  [What is Razor Network?](explainer.md)
