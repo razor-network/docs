@@ -11,9 +11,6 @@ Razor Network is truly decentralized oracle platform offering a high degree of d
 
 Razor Network is a Proof of Stake consensus algorithm which achieves consensus on oracle values by Truth-by-consensus algorithm.
 
-## Does Razor Network have its own blockchain?
-Razor Network currently runs directly on Ethereum public networks. In the future, it will run on its own Proof of Stake blockchain with Honey Badger BFT.
-
 ## What kind of data is supported by Razor Network?
 Razor Network can retrieve any data which is publicly accessible on the internet.
 
