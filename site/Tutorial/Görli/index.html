@@ -557,7 +557,7 @@ Truffle can be installed by</p>
 </li>
 </ol>
 <p>Paste the following code in that file.</p>
-<pre><code>pragma solidity 0.5.10;
+<pre><code>pragma solidity 0.6.11;
 
 interface Razor {
     function getResult(uint256 id) external view returns (uint256);
@@ -572,7 +572,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x310DF80268CfB188B50291F2b7a1A26b97614F4D);
+        razor = Razor(0x5E164F3eD15d3a0eC27cDde58A2538323c549BB9);
     }
 
     function addFeed(uint256 jobId) public {
@@ -586,15 +586,15 @@ contract King {
         uint256 highestGainer = 0;
         uint256 leastLoss = 0;
         uint256 leastLoser = 0;
-        for(uint256 i = 0; i &lt; jobs.length; i++) {
+        for(uint256 i = 0; i < jobs.length; i++) {
             uint256 price = razor.getResult(jobs[i]);
-            if(price &gt; lastResults[i]) {
-                if(price - lastResults[i] &gt; highestGain) {
+            if(price > lastResults[i]) {
+                if(price - lastResults[i] > highestGain) {
                     highestGain = price - lastResults[i];
                     highestGainer = jobs[i];
                 }
-            } else if(price &lt; lastResults[i]) {
-                    if(lastResults[i] - price &lt; leastLoss) {
+            } else if(price < lastResults[i]) {
+                    if(lastResults[i] - price < leastLoss) {
                         leastLoss = lastResults[i] - price;
                         leastLoser = jobs[i];
                     }
@@ -602,9 +602,9 @@ contract King {
 
             lastResults[i] = price;
         }
-        if (highestGain &gt; 0) {
+        if (highestGain > 0) {
             king = highestGainer;
-        } else if (leastLoss &gt; 0) {
+        } else if (leastLoss > 0) {
             king = leastLoser;
         }
     }

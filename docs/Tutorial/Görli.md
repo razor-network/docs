@@ -35,7 +35,7 @@ The smart contract has the following functionality:
 Paste the following code in that file.
 
 ```
-pragma solidity 0.5.10;
+pragma solidity 0.6.11;
 
 interface Razor {
     function getResult(uint256 id) external view returns (uint256);
@@ -50,7 +50,7 @@ contract King {
     uint256[] public lastResults;
 
     constructor() public {
-        razor = Razor(0x310DF80268CfB188B50291F2b7a1A26b97614F4D);
+        razor = Razor(0x5E164F3eD15d3a0eC27cDde58A2538323c549BB9);
     }
 
     function addFeed(uint256 jobId) public {
