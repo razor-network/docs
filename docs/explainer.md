@@ -27,7 +27,7 @@ The various kinds of attacks that can be faced by a decentralized oracle such as
 3. Cover a large number of use cases by allowing results to be fetched both manually or automatically
 
 ### How does Razor Network compare to other oracles?
-![Compariosn](img/comparison.png)
+![Compariosn](img/comparison.jpg)
 
 *Comparison of decentralized oracle networks*
 
