@@ -23,8 +23,7 @@ The various kinds of attacks that can be faced by a decentralized oracle such as
 #### Apart from being secure from such attacks, Razor Network has the following features:
 
 1. An oracle which is both fast and secure
-2. Sufficient scalability to serve web 3\.0 as well as web 2\.0 applications
-3. Cover a large number of use cases by allowing results to be fetched both manually or automatically
+2. Cover a large number of use cases by allowing results to be fetched both manually or automatically
 
 ### How does Razor Network compare to other oracles?
 ![Compariosn](img/comparison.jpg)
