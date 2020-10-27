@@ -17,7 +17,7 @@ You can run following commands in CLI:
 >WARNING: this is not a secure method of key generation, DO NOT use it for assets on mainnet.
 The code will be improved in the future to make key generation more secure.
 
-Fund this account with ether and schells to start participating in the network.
+Fund this account with ether and RAZORs to start participating in the network.
 
 You can use the full commands (stake) or the short form (s) as shown below.
 
@@ -25,15 +25,15 @@ Supported commands:
 
     stake|s <amount> <address> <password>
 
-Stake some schells
+Stake some RAZORs
 
     unstake|u <accountId>
 
-Unstake all schells
+Unstake all RAZORs
 
     withdraw|w <accountId>
 
-Withdraw all schells. Make sure schells are unstaked and unlocked
+Withdraw all RAZORs. Make sure RAZORs are unstaked and unlocked
 
     vote|v <account> <password>
 
@@ -41,7 +41,7 @@ Start monitoring contract, commit, vote, propose and dispute automatically
 
     transfer|t <to> <amount> <from> <password>
 
-transfer schells
+transfer RAZORs
 
     create|c <password>
 
