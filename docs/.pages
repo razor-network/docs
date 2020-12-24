@@ -3,5 +3,7 @@ arrange:
     - Quick Start
     - Tutorial
     - explainer.md
+    - client.md
+    - Contracts
     - ...
     - FAQ.md
