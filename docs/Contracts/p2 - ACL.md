@@ -61,7 +61,7 @@
 ### Roles and their Holders
 
 
-![ACL](img/ACL.png)
+![ACL](../img/ACL.png)
 
 | ***Role***                | ***Accessible Functions***                              | ***Functions of*** | ***Role Holder*** |
 | :------------------------ | :------------------------------------------------------ | :----------------- | :---------------- |
