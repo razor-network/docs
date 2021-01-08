@@ -1,4 +1,4 @@
-# Contracts
+# Introduction
 The contracts can be found in our github repo [here](https://github.com/razor-network/contracts)
 
 The addresses where the contracts are deployed can be found [here](https://github.com/razor-network/contracts/blob/master/ADDRESSES.md)
