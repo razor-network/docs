@@ -1,3 +1,17 @@
 [build]
 command = "mkdocs build"
 publish = "site"
+
+
+[[redirects]]
+  from = "https://docs.razor.to/"
+  to = "https://docs.razor.network/"
+  status = 301
+  force = true
+
+
+  [[redirects]]
+  from = "https://docs.razor.to/explainer/"
+  to = "https://docs.razor.network/explainer/"
+  status = 301
+  force = true 
