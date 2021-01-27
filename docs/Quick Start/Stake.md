@@ -46,7 +46,7 @@ In future we will provide a docker container to make things easier.
 
     `mkdir keys`
 
-5. Rename the file config-sample.json to sample.json
+5. Rename the file config-sample.json to config.json
 
     `mv config-sample.json config.json`
 
