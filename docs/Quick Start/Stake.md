@@ -20,8 +20,8 @@ In order to get started, you will also need some Görli RAZORs.
 2. Set the network to "Görli testnet" in Metamask
 3. Go to [https://razorscan.io/#/faucet](https://razorscan.io/#/faucet)
 4. Paste your ethereum address in the address field.
-5. Click "Get RZR"
-6. After a few minutes, after your transaction is confirmed, click "Check RZR Balance" to confirm you have received some free testnet RAZORs.
+5. Click "Get RAZOR"
+6. After a few minutes, after your transaction is confirmed, click "Check RAZOR Balance" to confirm you have received some free testnet RAZORs.
 
 Now you are all set! Let's download the CLI client and start staking!
 

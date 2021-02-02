@@ -15,7 +15,7 @@ Razor Network is a Proof of Stake consensus algorithm which achieves consensus o
 Razor Network can retrieve any data which is publicly accessible on the internet.
 
 ## What is a RAZOR?
-RAZOR is the native ERC20 utility token used in Razor Network for staking purposes. It has the abbreviation RZR and symbol ʂ.
+RAZOR is the native ERC20 utility token used in Razor Network for staking purposes. It has the abbreviation RAZOR and symbol ʂ.
 
 ## Who can run a node?
 Razor Network is permissionless and decentralized. Anyone can run a node in the network provided they have enough RAZORs.
