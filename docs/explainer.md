@@ -26,18 +26,8 @@ The various kinds of attacks that can be faced by a decentralized oracle such as
 2. Cover a large number of use cases by allowing results to be fetched both manually or automatically
 
 ### How does Razor Network compare to other oracles?
-![Compariosn](img/comparison.jpg)
-
-*Comparison of decentralized oracle networks*
-
-As can be seen from the table above, there are two kinds of decentralized oracles:
-
-1. Oracles which have fast resolution times but are game theoretically insecure
-2. Oracles which have slow resolution times but are game theoretically secure
 
 There is a clear need in the market for an oracle which is both fast and secure\. Razor network fills that gap\.
-
-Razor is a decentralized oracle in contrast to Provable \(formerly Oraclize\), which is a centralized oracle\. Such centralized solutions are not included in the comparison\.
 
 ### How does the network achieve the goal of decentralization?
 
