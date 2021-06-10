@@ -2,22 +2,20 @@
 
 Razor network is a proof of stake network. In order to participate in the network as a validator, you will need to "Stake" your RAZORs. RAZORs are the native tokens in the network and they are compatible with the ERC20 tokens standard.
 
-> Warning: Razor network is in alpha state and is deployed on görli testnet. Please don't use assets with value.
+> Warning: Razor network is in alpha state and is deployed on Matic Mumbai testnet. Please don't use assets with value.
 
 ##Get tokens
 
-You will need some görli ether to pay for transaction fees.
+You will need some MATIC Tokens to pay for transaction fees.
 
 You can get some here:
 
-1. [https://goerli-faucet.slock.it/](https://goerli-faucet.slock.it/)
+1. [https://faucet.matic.network/](https://faucet.matic.network/)
 
-2. OR [https://faucet.goerli.mudit.blog/](https://faucet.goerli.mudit.blog/)
-
-In order to get started, you will also need some Görli RAZORs.
+In order to get started, you will also need some MATIC RAZORs.
 
 1. Use an ethereum compatible browser (e.g. Chrome browser with Metamask plugin)
-2. Set the network to "Görli testnet" in Metamask
+2. Set the network to "Matic Mumbai Testnet" in Metamask
 3. Go to [https://razorscan.io/#/faucet](https://razorscan.io/#/faucet)
 4. Paste your ethereum address in the address field.
 5. Click "Get RAZOR"
@@ -61,7 +59,7 @@ In future we will provide a docker container to make things easier.
 
     `ls keys`
 
-3. Send your RAZORs and görli ether to this address.
+3. Send your RAZORs and MATICs to this address.
 
 ## Stake
 1. Stake RAZORs using this command
