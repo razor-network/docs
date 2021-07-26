@@ -24,57 +24,52 @@ In order to get started, you will also need some MATIC RAZORs.
 Now you are all set! Let's download the CLI client and start staking!
 
 ##Download and Install
-You will need a development environment with `git, python and nodejs` to get started. Please check the internet on guides about how to install these.
+You will need a development environment with `git, python, go, go-ethereum, abigen and nodejs` to get started. Please check the internet on guides about how to install these.
 
 In future we will provide a docker container to make things easier.
 
-1. Clone the repositoy `https://github.com/razor-network/cli`
+1. Clone the repositoy `https://github.com/razor-network/razor-go`
 
-    `git clone git@github.com:razor-network/cli.git`
+    `git clone git@github.com:razor-network/razor-go.git`
 
 2. Go to the cloned directory
 
-    `cd cli`
+    `cd razor-go`
 
 3. Install packages
 
-    `npm i`
+    `npm install`
 
-4. Create a directory called keys
+4. Want to build your own smart contracts binding (Note : You must have go-ethreum and abigen installed)
 
-    `mkdir keys`
+    `npm run build-all`
+ 
+    (Note : You can run `npm run build` if you already have bindings)
+                       
+5. While building the binary, supply the provider RPC url and the gas multiplier 
 
-5. Rename the file config-sample.json to config.json
-
-    `mv config-sample.json config.json`
-
-6. Edit config.json to add your Ethereum node address (private or infura)
+6. The binary will be generated at build/bin
 
 ## Create a new wallet
 1. Create a new ethereum wallet with a password of your choice.
 
-    `node index.js c <password>`
+    `./razor create`
 
-2. You can check the `keys` directory for available wallets.
-
-    `ls keys`
-
-3. Send your RAZORs and MATICs to this address.
+2. Send your RAZORs and MATICs to this address.
 
 ## Stake
 1. Stake RAZORs using this command
 
-    `node index.js stake <amount of RAZORs to stake> <your ethereum address> <your password>`
+    `$ ./razor stake --address <address> --amount <amount>`
 
-
-    Example: `node index.js stake 1000 0xdeadbeef password123`
+    Example: `./razor stake --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000`
 
 2. Wait for the staking process to continue. It may take upto 10 minutes.
-3. Now you have staked your RAZORs and must start validating queries to avoid inactivity penalties.
-4. To start validating, use this command
+4. Now you have staked your RAZORs and must start validating queries to avoid inactivity penalties.
+5. To start validating, use this command
 
-   `node index.js vote <your ethereum address> <your password>`
+   `./razor vote --address <address>`
 
-   Example: `node index.js vote 0xdeadbeef password123`
+   Example: `./razor vote --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c`
 
  Your node will start automatically fetching and answering queries. You must keep our computer online to be able to validate without any interruptions.
