@@ -61,7 +61,8 @@ In future we will provide a docker container to make things easier.
 1. Delegate RAZORs using this command
 
     `./razor delegate --address <address> --amount <amount> --stakerId <staker_id>`
-    Example: `../razor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
+     
+     Example: `../razor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
 
-2. Now you have begun delegation process. You need to wait for some time to get status.
+2. You your wallet will be credited with sRZRs tokens of staker to which you delegate Razor tokens. sRZRs would help you to withdraw rewards or delegated funds. Hence you need to ensure that all your sRZRs are safe.
 
