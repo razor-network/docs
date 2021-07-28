@@ -63,5 +63,5 @@ In future we will provide a docker container to make things easier.
     `./razor delegate --address <address> --amount <amount> --stakerId <staker_id>`
     Example: `../razor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
 
-2. Now you have delegation process have begin. You need to wait for some time to get status.
+2. Now you have begun delegation process. You need to wait for some time to get status.
 
