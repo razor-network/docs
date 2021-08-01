@@ -7,7 +7,7 @@ Please check [Quick Start](Quick Start/Stake.md) for installation instructions
 
 ## Commands
 Run the commands in following way:
-    `node index.js <command>`
+    `./razor <command>`
 You can run following commands in CLI:
 
 `-help` See a list of available commands
@@ -23,37 +23,37 @@ You can use the full commands (stake) or the short form (s) as shown below.
 
 Supported commands:
 
-    stake|s <amount> <address> <password>
+    stake --address <address> --amount <amount>
 
 Stake some RAZORs
 
-    unstake|u <accountId>
+    delegate --address <address> --amount <amount> --stakerId <staker_id>
 
-Unstake all RAZORs
+unstake some RAZORs
 
-    withdraw|w <accountId>
+    unstake --address <address> --stakerId <staker_id> --amount <amount> --autoWithdraw
 
-Withdraw all RAZORs. Make sure RAZORs are unstaked and unlocked
+withdraw RAZORs
 
-    vote|v <account> <password>
+    withdraw --address <address> --stakerId <staker_id>
+    
+Delegate some RAZORs
+
+    setDelegation --address <address> --status <true_or_false> --commission <commission>
+
+Activate Delegation
+
+    vote --address <address>
 
 Start monitoring contract, commit, vote, propose and dispute automatically
 
-    transfer|t <to> <amount> <from> <password>
+    transfer --amount <amount> --to <transfer_to_address> --from <transfer_from_address>
 
 transfer RAZORs
 
-    create|c <password>
+    create
 
 Create wallet with the given password
-
-    demo|d
-
-sample query URLs
-
-    createJob|j <url> <selector> <name> <repeat> <fee> <account> <password>
-
-Create oracle query job.
 
 Here,
 
@@ -62,6 +62,6 @@ Here,
 
 ## Example
 
-    node index.js create deadbeef
-    node index.js stake 1000 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c deadbeef
-    node index.js vote 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c deadbeef
+    ./razor create
+    ./razor stake --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000
+    ./razor vote --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c
