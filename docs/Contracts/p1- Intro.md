@@ -10,5 +10,6 @@ The different kinds of contracts and their functions:
 3. Stake Manager: Staking and unstaking
 4. Vote Manager: Management of reported votes: commits and reveals
 5. Block Manager: Create new blocks on Razor Network
-6. Job Manager: This contract manager queue of pending queries and results of processed queries
-7. Delegator: Proxy contract provides access to the latest Job Manager contract.
+6. Asset Manager: This contract manager queue of pending queries and results of processed queries
+7. Parameters : A basic contract to store all the constants used in Razor Network Contracts.
+8. Delegator: Proxy contract provides access to the latest Job Manager contract.
