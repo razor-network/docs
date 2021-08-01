@@ -1,7 +1,7 @@
 # Introduction
 The contracts can be found in our github repo [here](https://github.com/razor-network/contracts)
 
-The addresses where the contracts are deployed can be found [here](https://github.com/razor-network/contracts/blob/master/deployed/matic/addresses.json)
+The addresses where the contracts are deployed can be found [here](https://github.com/razor-network/contracts/blob/master/deployed/matic_mumbai_testnet/addresses.json)
 
 The different kinds of contracts and their functions:
 
