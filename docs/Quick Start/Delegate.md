@@ -1,6 +1,6 @@
-#Quick start - Stake
+#Quick start - Delegate
 
-Razor network is a proof of stake network. In order to participate in the network as a validator, you will need to "Stake" your RAZORs. RAZORs are the native tokens in the network and they are compatible with the ERC20 tokens standard.
+Razor Network in beta state allows community members to delegate their Razor tokens. You can delegate your Razor tokens to any of the validators who have enabled delegation.Razor tokens are the native tokens of Razor Network, compatible with all the ERC20 tokens.
 
 > Warning: Razor network is in alpha state and is deployed on Matic Mumbai testnet. Please don't use assets with value.
 
@@ -57,19 +57,12 @@ In future we will provide a docker container to make things easier.
 
 2. Send your RAZORs and MATICs to this address.
 
-## Stake
-1. Stake RAZORs using this command
+## Delegate
+1. Delegate RAZORs using this command
 
-    `$ ./razor stake --address <address> --amount <amount>`
+    `./razor delegate --address <address> --amount <amount> --stakerId <staker_id>`
+     
+     Example: `./razor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
 
-    Example: `./razor stake --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000`
+2. Your wallet will be credited with sRZRs tokens of staker to which you delegate Razor tokens. sRZRs would help you to withdraw rewards or delegated funds. Hence you need to ensure that all your sRZRs are safe.
 
-2. Wait for the staking process to continue. It may take upto 10 minutes.
-4. Now you have staked your RAZORs and must start validating queries to avoid inactivity penalties.
-5. To start validating, use this command
-
-   `./razor vote --address <address>`
-
-   Example: `./razor vote --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c`
-
- Your node will start automatically fetching and answering queries. You must keep our computer online to be able to validate without any interruptions.
