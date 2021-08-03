@@ -46,7 +46,7 @@ In future we will provide a docker container to make things easier.
  
     (Note : You can run `npm run build` if you already have bindings)
                        
-5. While building the binary, supply the provider RPC url and the gas multiplier 
+5. While building the binary, supply the RPC URL, Gas Multiplier and Buffer Percentage. 
 
 6. The binary will be generated at build/bin
 
