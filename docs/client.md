@@ -23,15 +23,17 @@ You can use the full commands (stake) or the short form (s) as shown below.
 
 Supported commands:
 
-    stake --address <address> --amount <amount>
-
 Stake some RAZORs
+
+    stake --address <address> --amount <amount>
+    
+Delegate RAZORs
 
     delegate --address <address> --amount <amount> --stakerId <staker_id>
 
 unstake some RAZORs
 
-    unstake --address <address> --stakerId <staker_id> --amount <amount> --autoWithdraw
+    unstake --address <address> --stakerId <staker_id> --amount <amount_of_sRZRs/RZRs> --autoWithdraw
 
 withdraw RAZORs
 
