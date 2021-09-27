@@ -23,39 +23,37 @@ You can use the full commands (stake) or the short form (s) as shown below.
 
 Supported commands:
 
-Stake some RAZORs
+### Stake some RAZORs
 
     stake --address <address> --amount <amount>
     
-Delegate RAZORs
+### Delegate RAZORs
 
     delegate --address <address> --amount <amount> --stakerId <staker_id>
 
-unstake some RAZORs
+### unstake some RAZORs
 
     unstake --address <address> --stakerId <staker_id> --amount <amount_of_sRZRs/RZRs> --autoWithdraw
 
-withdraw RAZORs
+### withdraw RAZORs
 
     withdraw --address <address> --stakerId <staker_id>
     
-Delegate some RAZORs
+### Activate Delegation
 
     setDelegation --address <address> --status <true_or_false> --commission <commission>
 
-Activate Delegation
+### Start Voting
 
     vote --address <address>
 
-Start monitoring contract, commit, vote, propose and dispute automatically
+### transfer RAZORs
 
     transfer --amount <amount> --to <transfer_to_address> --from <transfer_from_address>
 
-transfer RAZORs
+### Create Wallet
 
     create
-
-Create wallet with the given password
 
 Here,
 
