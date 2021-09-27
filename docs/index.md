@@ -11,15 +11,15 @@ The core of Razor Network is a set of smart contracts, that can run on any Ether
 ## Detailed introduction
 For a detailed introduction, please check  [What is Razor Network?](explainer.md)
 
-##White paper
+## White paper
 The latest version of the whitepaper is always available at [Whitepaper](https://razor.network/whitepaper.pdf)
 
-##Smart contracts
+## Smart contracts
 Our smart contracts are hosted at [Contracts](https://github.com/razor-network/contracts)
 
 Please note that the project is in active development and breaking changes are introduced frequently.
 
-##Client
+## Client
 A Golang reference client is being developed. It can be found here: [CLI](https://github.com/razor-network/razor-go)
 
 Please see [Client documentation](client.md) for more details.
