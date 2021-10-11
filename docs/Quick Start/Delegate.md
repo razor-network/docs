@@ -83,14 +83,14 @@ If you already have account and private key. You can easily import that to `razo
     
 For Docker:
     
-    `$ docker exec --it razor-go razor import
+    `$ docker exec --it razor-go razor import`
 
 2. Send your RAZORs and MATICs to this address.
 
 ## Delegate
 1. Delegate RAZORs using this command
 
-    `$ ./razor delegate --address <address> --value <value> --stakerId <staker_id>
+    `$ ./razor delegate --address <address> --value <value> --stakerId <staker_id>`
 
     Example: `$ ./razor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
 
