@@ -1,10 +1,10 @@
-#Quick start - Delegate
+## Quick start - Delegate
 
 Razor network is a proof of stake network. In order to participate in the network as a delegator, you will need to "Delegate" your RAZORs. RAZORs are the native tokens in the network and they are compatible with the ERC20 tokens standard.
 
 > Warning: Razor network is in alpha state and is deployed on Matic Mumbai testnet. Please don't use assets with value.
 
-##Get tokens
+## Get tokens
 
 You will need some MATIC Tokens to pay for transaction fees.
 
