@@ -83,7 +83,7 @@ If you already have account and private key. You can easily import that to `razo
     
 For Docker:
     
-    `$ docker exec --it razor-go razor import
+    `$ docker exec --it razor-go razor import`
 
 2. Send your RAZORs and MATICs to this address.
 
@@ -96,7 +96,7 @@ For Docker:
 
 For Docker:
 
-    `$ docker exec -it razor-go razor stake --address <address> --value <value>
+    `$ docker exec -it razor-go razor stake --address <address> --value <value>`
 
 2. Wait for the staking process to continue. It may take upto 10 minutes.
 4. Now you have staked your RAZORs and must start validating queries to avoid inactivity penalties.
@@ -108,6 +108,6 @@ For Docker:
    
 For Docker:
 
-    `$ docker exec -it razor-go razor vote --address <address>
+    `$ docker exec -it razor-go razor vote --address <address>`
 
  Your node will start automatically fetching and answering queries. You must keep our computer online to be able to validate without any interruptions.
