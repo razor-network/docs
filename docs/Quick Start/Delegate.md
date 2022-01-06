@@ -39,7 +39,7 @@ if you are looking to install a Razor node through docker. You can checkout this
 ## Create a Account
 1. Create an account using `create` command. You will be asked to enter the password that'll be used to encrypt the keystore file.
 
-    `$ docker-compose run razor-go/usr/bin/razor create`
+    `$ docker-compose run usr/bin/razor create`
 
 
 2. Send your RAZORs and MATICs to this address.
@@ -47,10 +47,13 @@ if you are looking to install a Razor node through docker. You can checkout this
 ## Delegate
 1. Delegate RAZORs using this command
 
-    `$ $ docker-compose run razor-go/usr/bin/razor delegate --address <address> --value <value> --stakerId <staker_id>`
+    `$ ./razor delegate --address <address> --value <value> --stakerId <staker_id>`
 
-    Example: ` $ docker-compose run razor-go/usr/bin/razor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
+    Example: `$ ./razor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
 
+For Docker:
+
+    `$ docker exec -it razor-go razor delegate --address <address> --amount <amount> --stakerId <staker_id>`
 
 2. You need to wait for sometime till the delegation transaction gets confirmed. Once you have delegated funds, you will recieve the sRZRs from the corressponding staker.
 
