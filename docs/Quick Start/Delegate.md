@@ -20,18 +20,6 @@ In order to get started, you will also need some MATIC RAZORs.
 
 Now you are all set! Let's download the CLI client and start staking!
 
-##Download and Install
-One of the quickest ways to get `razor-go` up and running on your machine is by using Docker
-
-```
-docker run -d \
--it \
---name razor-go \
--v "$(echo $HOME)"/.razor:/root/.razor \ 
-razornetwork/razor-go
-```
-Note that we are leveraging docker bind-mounts to mount `.razor` directory so that we have a shared mount of `.razor` directory between the host and the container. The `.razor `directory holds keys to the addresses that we use in `razor-go`, along with logs and config. We do this to persist data in the host machine, otherwise you would lose your keys once you delete the container.
-
 ## Installing a Razor Node
 
 if you are looking to install a Razor node through docker. You can checkout this link.
@@ -39,7 +27,7 @@ if you are looking to install a Razor node through docker. You can checkout this
 ## Create a Account
 1. Create an account using `create` command. You will be asked to enter the password that'll be used to encrypt the keystore file.
 
-    `$ docker-compose run usr/bin/razor create`
+    `$ docker-compose run razor-go/usr/bin/razor create`
 
 
 2. Send your RAZORs and MATICs to this address.
@@ -47,13 +35,9 @@ if you are looking to install a Razor node through docker. You can checkout this
 ## Delegate
 1. Delegate RAZORs using this command
 
-    `$ ./razor delegate --address <address> --value <value> --stakerId <staker_id>`
+    `$ razor-go/usr/bin/razorrazor delegate --address <address> --value <value> --stakerId <staker_id>`
 
-    Example: `$ ./razor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
-
-For Docker:
-
-    `$ docker exec -it razor-go razor delegate --address <address> --amount <amount> --stakerId <staker_id>`
+    Example: `$ razor-go/usr/bin/razorrazor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
 
 2. You need to wait for sometime till the delegation transaction gets confirmed. Once you have delegated funds, you will recieve the sRZRs from the corressponding staker.
 
