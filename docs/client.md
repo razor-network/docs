@@ -80,7 +80,7 @@ Supported commands:
     
 ### Activate Delegation
 
-    ./razor setDelegation --address <address> --status <true_or_false> --commission <commission>
+    setDelegation --address <address> --status <true_or_false> --commission <commission>
 
 ### Start Voting
 
