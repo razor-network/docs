@@ -20,79 +20,16 @@ In order to get started, you will also need some MATIC RAZORs.
 
 Now you are all set! Let's download the CLI client and start staking!
 
-##Download and Install
-One of the quickest ways to get `razor-go` up and running on your machine is by using Docker
+## Installing a Razor node
 
-```
-docker run -d \
--it \
---name razor-go \
--v "$(echo $HOME)"/.razor:/root/.razor \ 
-razornetwork/razor-go
-```
-Note that we are leveraging docker bind-mounts to mount `.razor` directory so that we have a shared mount of `.razor` directory between the host and the container. The `.razor `directory holds keys to the addresses that we use in `razor-go`, along with logs and config. We do this to persist data in the host machine, otherwise you would lose your keys once you delete the container.
-
-You need to set a provider before you can use the razor-go cli on docker
-
-`docker exec -it razor-go setconfig -p <provider_url>`
-
-You can now execute razor-go cli commands by running:
-
-`docker exec -it razor-go <command>
-
-### Building the source
-
-1. Clone the repositoy `https://github.com/razor-network/razor-go`
-
-    `git clone git@github.com:razor-network/razor-go.git`
-
-2. Go to the cloned directory
-
-    `cd razor-go`
-
-3. Install packages
-
-    `npm install`
-
-4. If you want to build it from scratch i.e./ by fetching the smart contract bindings as well, run `npm run build-all`.
- 
-    (Note : To build from scratch, `geth` and `abigen` must be installed in your system)
-                       
-5. If you already have the `pkg/bindings` you can run `npm run build` instead of `npm run build-all` to directly build the binary.
-
-6. While building the binary, supply the provider RPC url and the gas multiplier.
-
-7. The binary will be generated at `build/bin`.
-
-8. Go to the `build/bin` directory where the razor binary is generated.
-
-`cd build/bin`
-
-## Create a Account
-1. Create an account using `create` command. You will be asked to enter the password that'll be used to encrypt the keystore file.
-
-    `$ ./razor create`
-
-For Docker:
-
-    `docker exec -it razor-go razor create`
-
-If you already have account and private key. You can easily import that to `razor-go` client. To do that you can use `import` command. You will be asked to enter the private key and then the password.
-
-    `$ ./razor import`
-    
-For Docker:
-    
-    `$ docker exec --it razor-go razor import`
-
-2. Send your RAZORs and MATICs to this address.
+If you are looking to Install it from docker, you can checkout following link.
 
 ## Stake
 1. Stake RAZORs using this command
 
-    `$ ./razor stake --address <address> --value <value>`
+    `$ $ docker-compose run razor-go/usr/bin/razor stake --address <address> --value <value>`
 
-    Example: `./razor stake --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --value 1000`
+    Example: `$ docker-compose run razor-go/usr/bin/razor stake --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --value 1000`
 
 For Docker:
 
@@ -102,12 +39,14 @@ For Docker:
 4. Now you have staked your RAZORs and must start validating queries to avoid inactivity penalties.
 5. To start validating, use this command
 
-   `./razor vote --address <address>`
+   `$ docker-compose run razor-go/usr/bin/razor vote --address <address>`
 
-   Example: `./razor vote --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c`
-   
-For Docker:
+   Example: `.$ docker-compose run razor-go/usr/bin/razor vote --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c`
 
-    `$ docker exec -it razor-go razor vote --address <address>`
+6. If you want to enable delegation for your node, you can run following command.
+
+    `$ docker-compose run razor-go/usr/bin/razor setDelegation --address <address> --status <true_or_false> --commission <commission>`
+
+    It will enable the delegation, and people can delegate funds to your staker's account.
 
  Your node will start automatically fetching and answering queries. You must keep our computer online to be able to validate without any interruptions.
