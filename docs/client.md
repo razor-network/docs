@@ -1,13 +1,52 @@
-# Running a Node
-You will need to run a node in order to become a staker and answer to queries in the network.
+# Running a Razor Network Node
+In this tutorial, we will explain the basic fundamental requirements to run your own validator node. 
 
-## Installation
+## Installation From Source
 
-Please check [Quick Start](Quick Start/Stake.md) for installation instructions
+Please follow Instructions here to run a razor node from source.
+
+## Using Docker
+
+It is higly recommended to run Razor Node using Docker. This is because you dont need a complete development enviroment to run a node. Also we keep on updating and deploying the code from our github repository. 
+
+## Requirements
+
+Docker-CE : Quick instructions for setting up Docker is given below:
+
+### Create a Directory
+
+Once you have setup the Docker, you need to Run a Razor Node.
+
+Create a local directory to add all the configuration parameters in razor.yaml file.
+
+`vi $HOME/.razor/razor.yaml`
+
+Add following configuration parameters in the razor.yaml file
+
+    `buffer: 20
+     gaslimit: 2
+     gasmultiplier: 1
+     gasprice: 0
+     provider: <rpc-url>
+     wait: 30`
+
+The parameters' value can be setup as per your requirements.
+
+### Setup a Account or Create account
+
+`docker-compose run razor-go/usr/local/bin/razor create`
+
+OR
+
+`docker-compose run razor-go/usr/local/bin/razor import`
+
+After setting up the account, Get some tRAZORs and tMATICs to 
+start voting. 
+
 
 ## Commands
 Run the commands in following way:
-    `node index.js <command>`
+    `docker-compose run razor-go /usr/local/bin/razor <command>`
 You can run following commands in CLI:
 
 `-help` See a list of available commands
@@ -23,37 +62,37 @@ You can use the full commands (stake) or the short form (s) as shown below.
 
 Supported commands:
 
-    stake|s <amount> <address> <password>
+### Stake some RAZORs
 
-Stake some RAZORs
+ stake --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --value 56781001 --pow 14
+    
+### Delegate RAZORs
 
-    unstake|u <accountId>
+    delegate --address <address> --value <value> --pow <power> --stakerId <staker_id>
 
-Unstake all RAZORs
+### unstake some RAZORs
 
-    withdraw|w <accountId>
+    unstake --address <address> --stakerId <staker_id> --value <value> --pow <power> --autoWithdraw
 
-Withdraw all RAZORs. Make sure RAZORs are unstaked and unlocked
+### withdraw RAZORs
 
-    vote|v <account> <password>
+    withdraw --address <address> --stakerId <staker_id>
+    
+### Activate Delegation
 
-Start monitoring contract, commit, vote, propose and dispute automatically
+    setDelegation --address <address> --status <true_or_false> --commission <commission>
 
-    transfer|t <to> <amount> <from> <password>
+### Start Voting
 
-transfer RAZORs
+    vote --address <address>
 
-    create|c <password>
+### transfer RAZORs
 
-Create wallet with the given password
+    transfer --amount <amount> --to <transfer_to_address> --from <transfer_from_address>
 
-    demo|d
+### Create Wallet
 
-sample query URLs
-
-    createJob|j <url> <selector> <name> <repeat> <fee> <account> <password>
-
-Create oracle query job.
+    create
 
 Here,
 
@@ -62,6 +101,6 @@ Here,
 
 ## Example
 
-    node index.js create deadbeef
-    node index.js stake 1000 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c deadbeef
-    node index.js vote 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c deadbeef
+    ./razor create
+    ./razor stake --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000
+    ./razor vote --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c
