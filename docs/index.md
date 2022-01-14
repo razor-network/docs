@@ -22,4 +22,4 @@ Please note that the project is in active development and breaking changes are i
 ## Client
 A Golang reference client is being developed. It can be found [here](https://github.com/razor-network/razor-go)
 
-Please see [Client documentation](client.md) for more details.
+To set up a Razor Network client, please check our [Quick Start](Quickstart/Stake.md) guide.
