@@ -1,13 +1,27 @@
-# Running a Razor Network Node
-In this tutorial, we will explain the basic fundamental requirements to run your own validator node. 
+#Quick start - Stake
 
-## Installation From Source
+Razor network is a proof of stake network. In order to participate in the network as a validator, you will need to "Stake" your RAZORs. RAZORs are the native tokens in the network and they are compatible with the ERC20 tokens standard.
 
-Please follow Instructions here to [run a Razor Network node from source](https://github.com/razor-network/razor-go#building-the-source)
+> Warning: Razor network is in alpha state and is deployed on Matic Mumbai testnet. Please don't use assets with value.
+
+##Get tokens
+
+You will need some MATIC Tokens to pay for transaction fees.
+
+You can get some here:
+
+1. [https://faucet.matic.network/](https://faucet.matic.network/)
+
+In order to get started, you will also need some MATIC RAZORs.
+
+1. Use an ethereum compatible browser (e.g. Chrome browser with Metamask plugin)
+2. Set the network to "Matic Mumbai Testnet" in Metamask
+
+Now you are all set! Let's download the client and start staking!
 
 ## Using Docker
 
-It is higly recommended to run Razor Node using Docker. This is because you dont need a complete development enviroment to run a node. Also we keep on updating and deploying the code from our github repository. 
+It is highly recommended to run Razor Node using Docker. This is because you dont need a complete development enviroment to run a node. Also we keep on updating and deploying the code from our github repository. 
 
 ## Hardware Requirements
 
@@ -86,7 +100,14 @@ An example of this command would be:
 
     docker exec -it razor-go razor setDelegation --address 0x4561aE6Bd8aF4E6E8668C55496cF73F882CfcbFa --status true --commission 1
 
+It will enable delegation, and participants can delegate RAZOR tokens to your staker's account.
 
-That's it! You should have a staker up and running. You can monitor the logs, and use [RazorScan](https://razorscan.io) to monitor your staker. 
+
+That's it! You should have a staker up and running. Your node will start automatically fetching and answering queries. You must keep our computer online to be able to validate without any interruptions. You can monitor the logs, and use [RazorScan](https://razorscan.io) to monitor your staker. 
 
 For more details around all the commands of `razor-go`, please check out the `razor-go` [Readme](https://github.com/razor-network/razor-go#readme)
+
+
+## Installation From Source
+
+If you would rather install from source, please follow Instructions here to [run a Razor Network node from source](https://github.com/razor-network/razor-go#building-the-source)
