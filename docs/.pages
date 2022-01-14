@@ -1,9 +1,7 @@
 arrange:
     - index.md
-    - Quick Start
-    - Tutorial
     - explainer.md
-    - client.md
+    - Stake.md
+    - Delegate.md
     - Contracts 
-    - ...
     - FAQ.md
