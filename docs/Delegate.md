@@ -10,7 +10,7 @@ You will need some tMATIC Tokens to pay for transaction fees.
 
 You can get some here:
 
-1. [https://faucet.matic.network/](https://faucet.matic.network/)
+1. [https://faucet.polygon.technology/](https://faucet.polygon.technology/)
 
 In order to get started, you will also need some MATIC RAZORs.
 
