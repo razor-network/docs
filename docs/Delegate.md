@@ -4,40 +4,60 @@ Razor network is a proof of stake network. In order to participate in the networ
 
 > Warning: Razor network is in alpha state and is deployed on Matic Mumbai testnet. Please don't use assets with value.
 
-## Get tokens
+## Metamask Setup
 
-You will need some tMATIC Tokens to pay for transaction fees.
-
-You can get some here:
-
-1. [https://faucet.polygon.technology/](https://faucet.polygon.technology/)
-
-In order to get started, you will also need some MATIC RAZORs.
-
-1. Use an ethereum compatible browser (e.g. Chrome browser with Metamask plugin)
-2. Set the network to "Matic Mumbai Testnet" in Metamask
-3. If you want to get some testnet RAZOR tokens, contact us on Discord.
-
-Now you are all set! Let's download the CLI client and start staking!
-
-## Installing a Razor Node
-
-if you are looking to install a Razor node through docker. You can checkout this link.
-
-## Create a Account
-1. Create an account using `create` command. You will be asked to enter the password that'll be used to encrypt the keystore file.
-
-    `$ docker-compose run razor-go/usr/bin/razor create`
+1. Change the Network to “Polygon Mumbai Testnet” 
+2. Click on “Import Tokens” 
+3. Under “Token Contract Address” input the testnet RAZOR token contract address.
+4. Now your wallet must be showing the Test RAZOR in your wallet.
+5. Make sure to get some test MATIC on Mumbai for gas from the faucet [here](https://faucet.polygon.technology/)
 
 
-2. Send your RAZORs and MATICs to this address.
+## Delegation on Razorscan
 
-## Delegate
-1. Delegate RAZORs using this command
+### Step 1
 
-    `$ razor-go/usr/bin/razorrazor delegate --address <address> --value <value> --stakerId <staker_id>`
+ Visit <https://razorscan.io/>
 
-    Example: `$ razor-go/usr/bin/razorrazor delegate --address 0x5a0b54d5dc17e0aadc383d2db43b0a0d3e029c4c --amount 1000 --stakerId 1`
+ **Note** : *We recommend all the Delegators to bookmark this specific URL to prevent any phishing Attacks*
 
-2. You need to wait for sometime till the delegation transaction gets confirmed. Once you have delegated funds, you will recieve the sRZRs from the corressponding staker.
+![Screenshot](img/1.png)
+
+### Step 2
+ Now, click on “Connect Wallet” from the top right corner and make sure your network is set to “Polygon Mumbai Testnet”.
+
+![Screenshot](img/2.png)
+
+### Step 3
+ Once your wallet is connected, visit [https://razorscan.io/staking](https://razorscan.io/staking) or click on “Participants” from the menu bar on the left and you should see the screen below: 
+
+![Screenshot](img/3.png)
+
+### Step 4
+ Click on the “Delegate” button next to the staker of your choice to delegate your tokens to them. You can choose a staker based on activity, commission, stake, APR, age, etc.
+
+**Note** - *Commissions here refer to the percentage of the rewards earned on your delegated funds a staker would receive/charge for including your finds in their stake.*
+
+### Step 5
+ Once you click on Delegate, you will be shown a box with more info around the staker’s performance. Input the number of tokens you want to delegate and click on “Approve & Delegate”.
+
+![Screenshot](img/4.png)
+
+### Step 7
+
+ You will have a Metamask popup asking for approval. Verify the transaction and click on “Confirm”.
+
+![Screenshot](img/5.png)
+
+### Step 8
+
+ Once you sign the transaction, your tokens will be delegated and you will see a small pop up on the bottom of the screen on RazorScan confirming the tokens delegated.
+
+![Screenshot](img/6.png)
+
+### Step 9
+
+ By clicking on the Metamask icon on the RazorScan, you will be able to see your delegated stake. 
+
+![Screenshot](img/7.png)
 
