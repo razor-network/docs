@@ -29,8 +29,9 @@ Razor network is a proof of stake network. In order to participate in the networ
 ![Screenshot](img/2.png)
 
 ### Step 3
- Once your wallet is connected, visit [https://razorscan.io/staking](https://razorscan.io/staking) or click on “Participants” from the menu bar on the left and you should see the screen below: 
+ Once your wallet is connected, visit [https://razorscan.io/staking](https://razorscan.io/staking) or click on “Participants” from the menu bar on the left and you should see the screen below:
 
+![Screenshot](img/3.png)
 
 ### Step 4
 
