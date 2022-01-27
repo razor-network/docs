@@ -35,7 +35,7 @@ Razor network is a proof of stake network. In order to participate in the networ
 
 ### Step 4
 
-Unstake function works in only three states of an Epoch  Commit, Reveal and Confirm. To check the current state of an Epoch go to the “Participants” tab from the menu on the left side on RazorScan and you will see the state, like in the picture below: 
+Unstake function works in only Confirm State. To check the current state of an Epoch go to the “Participants” tab from the menu on the left side on RazorScan and you will see the state, like in the picture below: 
 
 ![Screenshot](/img/8.png)
 
@@ -81,5 +81,5 @@ Once the Epoch moves to the appropriate one, navigate to your account by clickin
 
 Choose the amount you wish to withdraw from the unstaked amount and sign the transaction. Once completed, you will be able to view the amount in your wallet. 
 
-**Note** : *We have restricted the unstaking functionality to only Commit, Reveal and Confirm State. Once you have unstaked, you need to wait for some epochs, so the withdrawal lock period gets completed and you can withdraw. To get the exact details of Withdraw Lock Period you can visit [https://razorscan.io/governance/values](https://razorscan.io/governance/values)*
+**Note** : *We have restricted the unstaking functionality to only Confirm State. Once you have unstaked, you need to wait for some epochs, so the withdrawal lock period gets completed and you can withdraw. To get the exact details of Withdraw Lock Period you can visit [https://razorscan.io/governance/values](https://razorscan.io/governance/values)*
 
