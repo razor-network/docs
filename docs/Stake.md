@@ -34,7 +34,7 @@ It is highly recommended to run Razor Node using Docker. This is because you don
 
 Docker: You can find more information about installing docker [here](https://docs.docker.com/engine/install/)
 
-Razor-Go: You can download the Razor-go:v0.2.0 from [here](https://hub.docker.com/layers/razornetwork/razor-go/v0.2.0/images/sha256-f52b76981c29d91d1e2b6d03d11821ec8f57bb0f2d2b8fe6533736adb4abbc21?context=repo)
+Razor-Go: You can download the Razor-go:v0.2.0-incentnet-prod-patch.1 from [here](https://github.com/razor-network/razor-go/releases/tag/v0.2.0-incentnet-prod-patch.1)
 
 ## Setup
 
