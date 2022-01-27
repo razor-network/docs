@@ -102,6 +102,9 @@ An example of this command would be:
 
 It will enable delegation, and participants can delegate RAZOR tokens to your staker's account.
 
+Adding the sentry Support
+
+    docker run -d  -v $(pwd)/.razor:/root/.razor -e SENTRY_DSN='https://d062a5a66bf74828955c93289b59cf4e@o1070194.ingest.sentry.io/6065829'   -v "$(pwd)"/.razor/password:/root/.razor/password    razornetwork/razor-go:v0.2.0-incentnet-staging-patch.1    razor stake --address 0xbaC9609ED8F4d24Ad5f8B723Ca81d0f7dBf271Ce --value 100000 --autoVote true  --password /root/.razor/password
 
 That's it! You should have a staker up and running. Your node will start automatically fetching and answering queries. You must keep our computer online to be able to validate without any interruptions. You can monitor the logs, and use [RazorScan](https://razorscan.io) to monitor your staker. 
 
