@@ -62,7 +62,7 @@ Add the following configuration parameters in the razor.yaml file
     -it \
     --name razor-go \
     -v "$(echo $HOME)"/.razor:/root/.razor \
-    razornetwork/v0.2.0-incentnet-prod-patch.1
+    razornetwork/razor-go:v0.2.0-incentnet-prod-patch.1
 
 This spins up a razor-go docker image. You can find all the images on the [Razor Network dockerhub](https://hub.docker.com/u/razornetwork).
 
