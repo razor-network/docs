@@ -2,6 +2,7 @@ arrange:
     - index.md
     - explainer.md
     - Stake.md
+    - RewardsAndPenalties.md
     - Delegation
     - Contracts
     - FAQ.md

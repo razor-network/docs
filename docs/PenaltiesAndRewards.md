@@ -29,7 +29,7 @@ If any staker, does not participate in epoch and do not provide the commit, then
 
 Considering technical issues, we have kept a Grace Period for inactivity. If by any chance staker is not able to participate in the network for epochs less then Grace Period, we do not give any Inactivity Penalties.
 
-## Rewwards
+## Rewards
 
 For every participation in each epoch, staker will be incentivised with increase in the influence of its on network. It is also known as Voting Rewards
 
