@@ -21,17 +21,17 @@ Razor network is a proof of stake network. In order to participate in the networ
 
  **Note** : *We recommend all the Delegators to bookmark this specific URL to prevent any phishing Attacks*
 
-![Screenshot](img/1.png)
+![Screenshot](/img/1.png)
 
 ### Step 2
  Now, click on “Connect Wallet” from the top right corner and make sure your network is set to “Polygon Mumbai Testnet”.
 
-![Screenshot](img/2.png)
+![Screenshot](/img/2.png)
 
 ### Step 3
  Once your wallet is connected, visit [https://razorscan.io/staking](https://razorscan.io/staking) or click on “Participants” from the menu bar on the left and you should see the screen below: 
 
-![Screenshot](img/3.png)
+![Screenshot](/img/3.png)
 
 ### Step 4
  Click on the “Delegate” button next to the staker of your choice to delegate your tokens to them. You can choose a staker based on activity, commission, stake, APR, age, etc.
@@ -41,23 +41,23 @@ Razor network is a proof of stake network. In order to participate in the networ
 ### Step 5
  Once you click on Delegate, you will be shown a box with more info around the staker’s performance. Input the number of tokens you want to delegate and click on “Approve & Delegate”.
 
-![Screenshot](img/4.png)
+![Screenshot](/img/4.png)
 
 ### Step 7
 
  You will have a Metamask popup asking for approval. Verify the transaction and click on “Confirm”.
 
-![Screenshot](img/5.png)
+![Screenshot](/img/5.png)
 
 ### Step 8
 
  Once you sign the transaction, your tokens will be delegated and you will see a small pop up on the bottom of the screen on RazorScan confirming the tokens delegated.
 
-![Screenshot](img/6.png)
+![Screenshot](/img/6.png)
 
 ### Step 9
 
  By clicking on the Metamask icon on the RazorScan, you will be able to see your delegated stake. 
 
-![Screenshot](img/7.png)
+![Screenshot](/img/7.png)
 

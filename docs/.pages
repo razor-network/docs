@@ -2,6 +2,6 @@ arrange:
     - index.md
     - explainer.md
     - Stake.md
-    - Delegate.md
-    - Contracts 
+    - Contracts
+    - Delegation
     - FAQ.md
