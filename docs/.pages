@@ -3,6 +3,7 @@ arrange:
     - IncentivisedTestnet.md
     - explainer.md
     - Stake.md
+    - PenaltiesAndRewards.md
     - Delegation
     - Contracts
     - FAQ.md
