@@ -85,11 +85,9 @@ You can use the full commands (stake) or the short form (s) as shown below.
 
 Start staking using the `stake` command
 
-    docker exec -it razor-go razor stake --address <account> --value <value> --autoVote <bool>
+    docker exec -it razor-go razor stake --address <account> --value <value> 
 
 where `address` is the address that contains RAZOR testnet tokens and `value` is the amount of RAZOR that you want to stake.
-
-`autoVote` specifies if we want to start participating immediately after staking RAZOR. Set to true if you want this.
 
 An example of this command would be:
 
@@ -106,6 +104,14 @@ An example of this command would be:
     docker exec -it razor-go razor setDelegation --address 0x4561aE6Bd8aF4E6E8668C55496cF73F882CfcbFa --status true --commission 1
 
 It will enable delegation, and participants can delegate RAZOR tokens to your staker's account.
+
+Start voting using the `vote` command
+
+    docker exec -it razor-go razor vote --address <account>
+
+An example of this command would be: 
+
+    docker exec -it razor-go razor vote --address 0x4561aE6Bd8aF4E6E8668C55496cF73F882CfcbFa
 
 
 View Logs 

@@ -4,6 +4,10 @@ Razor network is a proof of stake network. In order to participate in the networ
 
 > Warning: Razor network is in alpha state and is deployed on Matic Mumbai testnet. Please don't use assets with value.
 
+## TLDR;
+
+Withdrawing your funds from Razor Network is the two Step process. The first Step is to Unstake and other one is to Withdraw. Any staker of delegator can unstake their funds in 5th State, also known as Confirm State. Once you have reached to confirm State you can follow the steps given in the Guide and perform Unstake. When you Unstake, the funds will be locked in the smart contracts for 48 epochs which is subjected to change based on the governance proposals. So as per current value of Withdraw lock, You can withdraw the tokens after 48 epochs by performing the Withdraw transaction. 
+
 ## Metamask Setup
 
 1. Change the Network to “Polygon Mumbai Testnet” 
