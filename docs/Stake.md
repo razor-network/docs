@@ -21,7 +21,7 @@ Now you are all set! Let's download the client and start staking!
 
 ## Using Docker
 
-It is highly recommended to run Razor Node using Docker. This is because you dont need a complete development enviroment to run a node. Also we keep on updating and deploying the code from our github repository. 
+It is highly recommended to run Razor Node using Docker. This is because you don't need a complete development environment to run a node. Also we keep on updating and deploying the code from our github repository. 
 
 ## Hardware Requirements
 

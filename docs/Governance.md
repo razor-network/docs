@@ -1,8 +1,8 @@
 # Governance
 
-Governance aims to enable the oracle network to do subjective decision making based on acceptions and rejections of the proposals. The proposals will be mostly around
+Governance aims to enable the oracle network to do subjective decision making based on acceptances and rejections of the proposals. The proposals will be mostly around
 
-1. Acception or Rjection of Data soruces collections.
+1. Acceptance or Rejection of Data source collections.
 2. Change in the parameters of the Validation layer.
 
 It is quite important to whitelist of backlist the data sources to prevent any misinformation and DOS attacks.
@@ -11,7 +11,7 @@ It is quite important to whitelist of backlist the data sources to prevent any m
 
 1. Withdraw Lock Period
 
-After unstake the funds will be locked for some time. Stakers can withdraw funds after withdraw lock period is compeleted.
+After unstake the funds will be locked for some time. Stakers can withdraw funds after withdraw lock period is completed.
 
 2. Max Alt Blocks
 
@@ -19,13 +19,13 @@ The maximum number of blocks that can be added to Block Proposed List.
 
 3. Max Tolerance
 
-The noise in the Price that should be considered to avoid any penalties on staker, if there is difference btween the values proposed.
+The noise in the Price that should be considered to avoid any penalties on staker, if there is difference between the values proposed.
 
 4. Withdraw Release Period
 
 The tokens should be withdrawn withing specific epochs. If withdraw release period completes, stakers need to extend locks.
 
-5. extand Lock Penalty
+5. Extend Lock Penalty
 
 If by any chance staker misses the withdraw release period they can extend the withdraw lock by providing some penalty.
 
@@ -35,7 +35,7 @@ Staker's stake will be slashed if it performs any malicious activity on the netw
 
 7. Grace Period
 
-The period for which staker wont be charged any Penality if it does not participate in the network.
+The period for which staker wont be charged any Penalty if it does not participate in the network.
 
 8. Minimum Stake
 
