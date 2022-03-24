@@ -1,17 +1,17 @@
 # Penalties and Reward Structure.
 
-Razor network has carefully designed ensuring that all the honest stakers get rewarded and malicous nodes get penalised. In order to prevent 51% takeover attack, the stakers with 51% of infulence are deincetivised heavily.
+Razor network has carefully designed ensuring that all the honest stakers get rewarded and malicious nodes get penalised. In order to prevent 51% takeover attack, the stakers with 51% of influence are desincetivised heavily.
 
 ## Influence, Reputation And Maturity.
 
-Razor network measures the reputation of every staker based on different factors like Stake. Whenver any staker performs stake action, it gets its reputation increased and vice versa. 
+Razor network measures the reputation of every staker based on different factors like Stake. Whenever any staker performs stake action, it gets its reputation increased and vice versa. 
 
         Reputation = Minimum(Log(m+s),Rc);
 
         Here, m is the maturity and s is the smoothing factor(to prevent high rate of growth) And Rc is the upper limit of Reputation.
 
 
-With Reputation and staker's stake, Infulence of Staker is calculated.
+With Reputation and staker's stake, Influence of Staker is calculated.
 
         Influence = Reputation * Stake
 
@@ -23,7 +23,7 @@ If staker tries to propose an invalid block, then any staker can dispute on that
 
 ### Voting Penalites
 
-If any staker, does not participate in epoch and do not provide the commit, then she will get its influence reduced by 1%. And if she commits and do not reveal then there will be signigicant amount of penality on influence.
+If any staker, does not participate in epoch and do not provide the commit, then she will get its influence reduced by 1%. And if she commits and do not reveal then there will be significant amount of penalty on influence.
 
 ### Inactivity Penalty
 
